@@ -1,0 +1,31 @@
+
+
+{
+  "dependencies": {
+    "express": "^4.18.3",
+    "python-shell": "^5.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "januai",
+  "version": "1.0.0",
+  "description": "A Virtual Girlfriend AI",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohanSakthivel/VirtualAIGirlfriend.git"
+  },
+  "keywords": [
+    "Janu",
+    "girlfriend",
+    "ai"
+  ],
+  "author": "rohansk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohanSakthivel/VirtualAIGirlfriend/issues"
+  },
+  "homepage": "https://github.com/RohanSakthivel/VirtualAIGirlfriend#readme"
+}
