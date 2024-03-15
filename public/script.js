@@ -89,9 +89,12 @@ function restartRecognition() {
 
 function sendMessage(message) {
     const chatBox = document.getElementById('chat-box');
-    const messageElement = document.createElement('p');
-    messageElement.textContent = 'You: ' + message;
-    chatBox.appendChild(messageElement);
+
+    // Create user message element
+    const userMessageElement = document.createElement('div');
+    userMessageElement.classList.add('chat-message', 'user-message');
+    userMessageElement.textContent = 'You: ' + message;
+    chatBox.appendChild(userMessageElement);
 
     fetch('/response', {
         method: 'POST',
@@ -102,15 +105,18 @@ function sendMessage(message) {
     })
     .then(response => response.json())
     .then(data => {
-        const responseElement = document.createElement('p');
-        responseElement.textContent = 'AI: ' + data.response;
-        chatBox.appendChild(responseElement);
+        // Create AI response element
+        const aiResponseElement = document.createElement('div');
+        aiResponseElement.classList.add('chat-message', 'girlfriend-message');
+        aiResponseElement.textContent = 'AI: ' + data.response;
+        chatBox.appendChild(aiResponseElement);
         speak(data.response);
     })
     .catch(error => {
         console.error('Error fetching response:', error);
     });
 }
+
 
 
 function speak(text) {
